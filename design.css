@@ -1,0 +1,387 @@
+body {
+  background-color: (#88ba45);
+  color: #000000;
+  font-family: Georgia, sans-serif;
+  background-image: linear-gradient(to bottom, #BACC81, #CDD193, #BACC81);
+}
+
+
+main {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+hr {
+  size: 2px;
+  background-color: #ba9465;
+  color: #ba9465;
+  width: 80%;
+  margin: 15px 15px;
+}
+
+header {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: Georgia, sans-serif;
+} 
+
+/* Slideshow for header in index.html*/    
+#bgslideshow { 
+  height: 770px;
+  background-size: cover;   
+  background-repeat: no-repeat;
+  background-position: center center;
+  backface-visibility: hidden;
+  /* #3 animation length code below */
+  animation: slideBg 13s linear infinite 0s;
+  animation-timing-function: ease-in-out;
+} 
+  /* #1 Length of time the slideshow stays on each photo */
+@keyframes slideBg{
+    0% {
+        background-image: url('Images/pic5.png');
+    }
+    45% {
+        background-image: url('Images/pic3.png');
+    }
+    100% {
+        background-image: url("Images/pic5.png");
+    }
+    /* #2 */
+    /* 90% {
+        background-image: url("meetteam.jpeg");
+    } */
+}
+/* End of Slideshow for header code */    
+
+
+/* Highlights text when you hover over it */
+/* Uncomment this if you want to implement this */
+/* p:hover, a:hover{background-color:#88ba45;
+-webkit-transition: background-color 1000ms linear;
+-ms-transition: background-color 1000ms linear;
+transition: background-color 3000ms linear;
+} */
+
+nav {
+  font-weight: bold;
+  color: #000000;
+  padding-left: 2em;
+  padding-right: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+ 
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+/* For dropdown links */
+nav ul ul {
+  position: absolute;
+  background-color: rgb(199, 226, 209);
+  padding: 0;
+  text-align: left; 
+  display: none;
+}
+
+nav ul ul li { 
+  border: 1px solid rgb(199, 226, 209);; 
+  display: block; 
+  margin-left: 0px;
+  margin-right: 20px; 
+  padding-bottom: .5em;
+  font-size: .9em;
+  }
+
+nav li:hover ul {
+  display: block;
+}
+
+nav li {
+  text-decoration: underline;
+  display: inline-block; 
+}
+
+nav a { 
+  text-decoration: none; 
+  display: inline;
+}
+nav a:link {color: #000000}
+nav a:visited {color: #000000;} 
+nav a:hover {
+  color: rgb(22, 134, 65);
+  background-color: rgb(199, 226, 209);
+  transition: background-color 1.3s linear; 
+}
+nav a:active {color: rgb(22, 134, 65)} 
+nav a {text-decoration: none;} 
+
+h1 {
+  line-height: 170px;
+  padding-left: 10px;
+  margin: 0;
+  margin-right: .8em;
+  background-image: url(Images/logo.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 7%;
+  height: 150px;
+  font-family: Georgia, sans-serif;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  background-color: #88ba45;
+  font-family: Georgia, sans-serif;
+  padding-left: 1em;
+  padding-top: .5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+  background-image: linear-gradient(90deg, #d4d4b3, #88ba45, #d4d4b3)
+}
+
+h3 {
+  color: #000033;
+  font-family: Georgia, sans-serif;
+  padding-left: 1em;
+  padding-top: .5em;
+  padding-bottom: 0.5em;
+  text-align: center;
+}
+
+p{font-size: 17px;} 
+
+footer {
+  font-weight: .90em;
+  font-family: italic;
+  text-align: center;
+  padding: 1em; 
+  margin-top: 2em
+}
+
+#wrapper {background-color: #d4d4b3;}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 102px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+figure {
+  text-align: center;
+  font-size: small;
+}
+
+#mobile {display: none;} 
+#desktop {display: inline;}
+
+/* Changes how to websites looks at 1024px browser sizes */ 
+@media only screen and (max-width: 1024px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-image: none;
+  }
+
+  #wrapper {
+    width: auto;
+    min-width: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+  nav {
+    float: none;
+    width: auto;
+    padding-top: 0.01em;
+    padding-bottom: 0.01em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+  }
+  nav li {display: inline-block;}
+  nav a {padding-right: 1.7em;}
+  main {
+    padding: 1em;
+    margin-left: 0;
+    font-size: 90%;
+  }
+  footer {margin: 0;} 
+}
+
+/* Changes how to websites looks at 868px browser sizes */ 
+@media only all and (max-width: 898px) {
+  h1 {
+    height: 100%;
+    font-size: 20px;
+    padding: auto;
+  }
+  nav {
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+
+  }
+
+  nav a {
+    display: inline-block;
+    padding: .2em;
+    font-size: .7em;
+    border-bottom: 1px;
+    border-bottom-color: #330000;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  nav li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    padding-top: .1em;
+    padding-right: 2.7em;
+    padding-bottom: .1em;
+    padding-left: .4em;
+    text-align: center;
+  }
+  footer {padding: 0;}
+  p{font-size: 13px}
+
+  #bgslideshow {
+    height: 100%;
+    width: 100%;   
+  }
+}
+
+/* Changes how to websites looks at 500px browser sizes */ 
+@media only screen and (max-width: 540px) {
+  .prev, .next,.text {font-size: 10px;} 
+  h1{font-size: 10px}
+  p{font-size: 11px;}
+  footer{font-size: 9px;}
+  
+  nav{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: .1em;
+    padding-right: .1em;
+  }
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  nav li {
+    border-bottom-color: #330000;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+  }
+}
+
+/* Slideshow in photogallery page */
+.slideshow-container {
+  width: 900px;
+  height: 550px;
+  position: relative;
+  margin: auto;
+}
+.mySlides1 {
+   display: none; 
+}
+
+.mySlides2 {
+   display: none; 
+}
+.image-align{text-align: center;}
+
+img{box-shadow: 3px 3px 1px grey; vertical-align: middle;
+max-width: 100%;height:auto;}
+
+* {box-sizing: border-box}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 38px;
+  transition: 1.8s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,.next:hover {background-color: rgba(0, 0, 0, 0.8);}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,.dot:hover {background-color: #717171;}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+ 
